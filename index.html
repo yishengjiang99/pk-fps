@@ -9,16 +9,20 @@
 	<title></title>
 </head>
 <body styled='display:grid;place-content:center'>
-	<div>
-		<pre>	Red boxes rendered with js. 
+	<pre>
+	Red boxes rendered with js. 
 	Black boxes rendered with react.
-	They both pretty fast.
- https://github.com/yishengjiang99/pk-fps/
+	They both look pretty fast.
 
-</pre>
-	</div>
-	<div style='max-width:1000px; background-color: gray;'>
-		<div id='root'></div>
+	x-coordinate (via translateX) time of render's fractional second.
+	I thought it would make easily visible the rendering cadance.
+	But they look pretty much the same.
+	probably svg is doing some fading on it to make look smooth (good job)
+	</pre>
+	<a href='https://github.com/yishengjiang99/pk-fps/' target='_blank'>
+		github repo (merge over 90% of pull requests!)</a>
+	<main style='position:relative;max-width:1000px;'>
+		<div style='background-color:gray;position:absolute;top:0' id='root'></div>
 		<div style='position:absolute;top:0'>
 			<div>
 				<svg width="1000" height="100" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
@@ -66,6 +70,8 @@
 		</div>
 		<script type='module' src="./build/index.js"></script>
 
+	</main>
 	</div>
+
 </body>
 </html>
